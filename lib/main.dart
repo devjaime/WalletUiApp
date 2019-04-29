@@ -7,7 +7,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Wallet',
+      title: 'IoT',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -33,7 +34,7 @@ class _DashBoardPageState extends State<DashBoardPage> {
   void changeTheme() async {
     if (colorSwitched) {
       setState(() {
-        logoImage = 'assets/images/wallet_dark_logo.png';
+        logoImage = 'assets/images/IoT.png';
         _backgroundColor = [
           Color.fromRGBO(252, 214, 0, 1),
           Color.fromRGBO(251, 207, 6, 1),
@@ -52,7 +53,7 @@ class _DashBoardPageState extends State<DashBoardPage> {
       });
     } else {
       setState(() {
-        logoImage = 'assets/images/wallet_logo.png';
+        logoImage = 'assets/images/IoT.png';
         _borderContainer = Color.fromRGBO(252, 233, 187, 1);
         _backgroundColor = [
           Color.fromRGBO(249, 249, 249, 1),
@@ -117,11 +118,11 @@ class _DashBoardPageState extends State<DashBoardPage> {
                 Column(
                   children: <Widget>[
                     Text(
-                      'Hello',
+                      'Bienvenido',
                       style: TextStyle(fontSize: 18, color: Colors.black),
                     ),
                     Text(
-                      'James Cashman',
+                      'Jaime Hernández',
                       style: TextStyle(
                           fontSize: 24,
                           color: Colors.black,
@@ -159,7 +160,7 @@ class _DashBoardPageState extends State<DashBoardPage> {
                               child: ListView(
                                 children: <Widget>[
                                   Text(
-                                    '790',
+                                    '4',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         color: _textColor,
@@ -167,7 +168,7 @@ class _DashBoardPageState extends State<DashBoardPage> {
                                         fontSize: 30),
                                   ),
                                   Text(
-                                    'Available Cash',
+                                    'Dispositivos conectados',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         color: _iconColor, fontSize: 16),
@@ -190,15 +191,15 @@ class _DashBoardPageState extends State<DashBoardPage> {
                             children: [
                               TableRow(children: [
                                 _actionList(
-                                    'assets/images/ic_send.png', 'Send Money'),
+                                    'assets/images/light-on.png', 'Luces'),
                                 _actionList(
-                                    'assets/images/ic_money.png', 'Request'),
+                                    'assets/images/door.png', 'Puertas'),
                               ]),
                               TableRow(children: [
-                                _actionList('assets/images/ic_transact.png',
-                                    'Transactions'),
-                                _actionList('assets/images/ic_reward.png',
-                                    'Reward Points'),
+                                _actionList('assets/images/termostato.png',
+                                    'Termostato'),
+                                _actionList('assets/images/seguridad.png',
+                                    'Seguridad'),
                               ])
                             ],
                           ),
